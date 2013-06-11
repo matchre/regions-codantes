@@ -11,33 +11,33 @@
         }
     ],
     "authors": [
- 	{
-	    "name" : "Monte, Régis",
-	    "role" : "auteur",
-	    "comment" : "version interstices en Java"
-	},
-	{
-	    "name" : "Surrel, Guillaume",
-	    "role" : "auteur",
-	    "comment" : "version interstices en Java"
-	},
-	{
-	    "name" : "Faroux, Gaël",
-	    "role" : "auteur",
-	    "comment" : "version originale de l'applet"
-	},
-	{
-	    "name" : "Baratin, Delphine ",
-	    "role" : "auteur",
-	    "comment" : "version originale de l'applet"
-	},
+     {
+        "name" : "Monte, Régis",
+        "role" : "auteur",
+        "comment" : "version interstices en Java"
+    },
+    {
+        "name" : "Surrel, Guillaume",
+        "role" : "auteur",
+        "comment" : "version interstices en Java"
+    },
+    {
+        "name" : "Faroux, Gaël",
+        "role" : "auteur",
+        "comment" : "version originale de l'applet"
+    },
+    {
+        "name" : "Baratin, Delphine ",
+        "role" : "auteur",
+        "comment" : "version originale de l'applet"
+    },
         {
             "name": "Lehmann Dussout, Hugo",
             "role": "auteur",
             "comment": "version HTLM5/JS"
         },
         {
-	  "name": "www.centralelilleprojets.fr",
+            "name": "www.centralelilleprojets.fr",
             "role": "producteur"
         }
     ],
