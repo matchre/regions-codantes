@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Régions Codantes</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            body {
+                background-color: #CCC;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- debut entete -->
+        <script src="jquery-1.9.1.js"></script>
+        <script src="jquery.nouislider.min.js"></script>
+        <script src="jcanvas.min.js"></script>
+        <script src="rcod.js"></script>
+        <link rel="stylesheet" type="text/css" href="rcod.css" />
+        <link rel="stylesheet" type="text/css" href="nouislider.fox.css" />
+        <!-- fin entete -->
+        <!-- Debut du grain -->
+        <style id="rcod-style-cds"></style>
+        <style id="rcod-style-op"></style>
+
+        <div id="rcod">
+            <div id="rcod-etapes">
+                <div class="rcod-titre">
+                    Etapes
+                </div>
+                <div class="rcod-contenu" id="rcod-listeEtapes">
+                    <a etape="1">Sélection d'une CDS candidate</a>
+                    <a etape="2">Traduction de la CDS candidate</a>
+                    <a etape="3">Recherche dans la base Swiss-Prot</a>
+                    <a etape="4">Affichage de la CDS confirmée</a>
+                </div>
+            </div>
+            <div id="rcod-messages">
+                <div class="rcod-titre">
+                    <span id="rcod-messagesTitre">Messages</span>
+                </div>
+                <div class="rcod-contenu" id="rcod-messagesContenu">
+
+                </div>
+            </div>
+            <div id="rcod-corps">
+                <div class="rcod-titre">
+                    <span id="rcod-corpsTitre">
+                        Chargement en cours...
+                    </span>
+                    <div id="rcod-menu"></div>
+                </div>
+                <div class="rcod-contenu" id="rcod-corpsContenu">
+                    <div corps="1">
+                        <div id="rcod-options">
+                            <label>
+                                <span style="background-color: #3C3"></span>
+                                <input type="checkbox" id="rcod-op-start" checked=""/>
+                                START
+                            </label><br/>
+                            <label>
+                                <span style="background-color: #C33"></span>
+                                <input type="checkbox" id="rcod-op-stop" checked=""/>
+                                STOP
+                            </label><br/>
+                            <label>
+                                <span style="background-color: #FC3"></span>
+                                <input type="checkbox" id="rcod-op-rbs" checked=""/>
+                                RBS
+                            </label>
+                            <div id="rcod-op-zoom" class="noUiSlider"></div>
+                            <p style="text-align: center">
+                                Zoom
+                            </p>
+                        </div>
+                        <div id="rcod-label">
+                            <div class="rcod-phase">RBS</div>
+                            <div class="rcod-phase">+3</div>
+                            <div class="rcod-phase">+2</div>
+                            <div class="rcod-phase">+1</div>
+                            <div class="rcod-seq">5'</div>
+                            <div class="rcod-seq">3'</div>
+                            <div class="rcod-phase">-1</div>
+                            <div class="rcod-phase">-2</div>
+                            <div class="rcod-phase">-3</div>
+                            <div class="rcod-phase">RBS</div>
+                        </div>
+                        <div id="rcod-cds">
+                            <div id="rcod-rbs_" class="rcod-phase"></div>
+                            <div id="rcod-phase_3" class="rcod-phase" phase="h3"></div>
+                            <div id="rcod-phase_2" class="rcod-phase" phase="h2"></div>
+                            <div id="rcod-phase_1" class="rcod-phase" phase="h1"></div>
+                            <div id="rcod-seq1" class="rcod-seq"></div>
+                            <div id="rcod-seq2" class="rcod-seq"></div>
+                            <div id="rcod-phase_-1" class="rcod-phase" phase="b1"></div>
+                            <div id="rcod-phase_-2" class="rcod-phase" phase="b2"></div>
+                            <div id="rcod-phase_-3" class="rcod-phase" phase="b3"></div>
+                            <div id="rcod-rbs-" class="rcod-phase"></div>
+                        </div>
+                        <div id="rcod-label2">
+                            <div class="rcod-phase">RBS</div>
+                            <div class="rcod-phase">+3</div>
+                            <div class="rcod-phase">+2</div>
+                            <div class="rcod-phase">+1</div>
+                            <div class="rcod-seq">3'</div>
+                            <div class="rcod-seq">5'</div>
+                            <div class="rcod-phase">-1</div>
+                            <div class="rcod-phase">-2</div>
+                            <div class="rcod-phase">-3</div>
+                            <div class="rcod-phase">RBS</div>
+                        </div>
+                    </div>
+                    <div corps="2">
+                        <div id="rcod-label-2">
+                            <div>
+                                Code génétique
+                            </div>
+                            <div>
+                                Séquence de la CDS candidate
+                            </div>
+                            <div>
+                                Séquence traduite
+                            </div>
+                        </div>
+                        <canvas id="rcod-canvas" width="300" height="300"></canvas>
+                        <div id="rcod-trad">
+                            <div>
+                                <table><tr id="rcod-candidate"></tr></table>
+                                <br/>
+                                <table><tr id="rcod-traduction"></tr></table>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div corps="3">
+                        <div id="rcod-label-3">
+                            <div>
+                                Séquence polypeptidique issue de la traduction.
+                            </div>
+                            <div>
+                                Accès à la base de protéines<br/>Swiss-Prot
+                            </div>
+                            <div>
+                                Collez ici le nom de la protéine dont la séquence ressemble le plus à la vôtre :
+                            </div>
+                        </div>
+                        <textarea id="rcod-tradfinale" readonly=""></textarea>
+                        <a href="http://web.expasy.org/blast/" target="_blank" id="rcod-swiss">Accéder à Swiss-Prot</a>
+                        <input type="text" id="rcod-protNom" value="" placeholder="Nom de la protéine"/>
+                        <a href="javascript:rcod.changerEtape(1)" id="rcod-protKO">Annuler l'annotation</a>
+                        <a href="javascript:rcod.suivant3()" id="rcod-protOK">Valider l'annotation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            /*
+             * Initialisation
+             */
+            $( function() {
+                rcod.valide(1);
+                rcod.changerEtape(1);
+            });
+        </script>
+        <!-- Fin du grain -->
+
+    </body>
+</html>

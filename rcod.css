@@ -1,0 +1,405 @@
+/*
+
+CSS pour le grain alignement
+
+*/
+
+/*
+
+Style des blocs principaux
+
+*/
+#rcod {
+    /* boite */
+    width: 780px;
+    height: 600px;
+    margin: auto;
+    /* Contenu */
+    background-color: #CCC;
+    position: relative;
+    font-family: arial;
+    font-size: 13px;
+}
+/* Tous les div principaux*/
+#rcod > div {
+    /* boite */
+    position: absolute;
+    /* Contenu */
+}
+
+/* div des étapes */
+#rcod-etapes {
+    /* boite */
+    top: 5px;
+    left: 5px;
+    width: 245px;
+}
+#rcod-etapes .rcod-contenu {
+    height: 88px;
+}
+
+/* div des messages */
+#rcod-messages {
+    /* boite */
+    top: 5px;
+    right: 5px;
+    width: 520px;
+}
+#rcod-messages .rcod-contenu {
+    height: 88px;
+}
+
+/* div des messages */
+#rcod-corps {
+    /* boite */
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+}
+#rcod-corps .rcod-contenu {
+    height: 405px;
+}
+
+
+/* Titre des blocs */
+.rcod-titre {
+    /* Boite */
+    border: solid 2px black;
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px;
+    /* Contenu */
+    padding: 7px;
+    background-color: #5f82cc;
+    color: white;
+    font-weight: bold;
+}
+/* Menus */
+#rcod-menu {
+    /* Boite */
+    position: absolute;
+    right: 7px;
+    top: 5px;}
+#rcod-menu a {
+    /* Boite */
+    height: 20px;
+    border: solid 1px black;
+    display: inline-block;
+    /* Contenu */
+    padding: 1px;
+}
+
+
+/* Contenu des blocs */
+.rcod-contenu {
+    /* Boite */
+    border: solid 2px black;
+    border-radius: 0px 0px 5px 5px;
+    /* Contenu */
+    padding: 5px;
+    background-color: white;
+    overflow: auto;
+}
+
+/* Liste des étapes */
+#rcod-listeEtapes a {
+    /* Boite */
+    display: block;
+    border: solid 1px white;
+    /* Contenu */
+    padding: 1px 5px 1px 5px;
+    text-decoration: none;
+    color: #BBB;
+}
+#rcod-listeEtapes a.rcod-etapeActuelle {
+    border-color: black;
+    background-color: #CCC;
+    color: black;
+}
+#rcod-listeEtapes a[href] {
+    color: black;
+}
+
+
+/* Corps */
+#rcod-corpsContenu > div {
+    display: none;
+}
+
+/*
+
+Corps 1
+
+*/
+
+/*Options*/ 
+#rcod-options {
+    width: 100px;
+    float: left;
+    border-right: solid 1px black;
+    height: 400px;
+}
+#rcod-options span {
+    display: inline-block;
+    width: 8px;
+    height: 13px;
+}
+#rcod-op-zoom {
+    margin: auto;
+    margin-top: 50px;
+    height: 200px;
+}
+
+/* Label */
+#rcod-label {
+    position: absolute;
+    left: 115px;
+    text-align: right;
+}
+#rcod-label2 {
+    position: absolute;
+    right: 10px;
+}
+#rcod-label div, #rcod-label2 div{
+    display: block;
+    font-weight: bold;
+    background: none;
+}
+
+/* CDS */
+#rcod-cds {
+    height: 400px;
+    position: absolute;
+    overflow: auto;
+    left: 150px;
+    right: 45px;
+}
+.rcod-seq, .rcod-phase {
+    margin-top: 20px;
+    white-space:nowrap;
+    background-image: url('pointille.jpg');
+    background-repeat: repeat no-repeat;
+    background-position: 0px 6px;
+}
+.rcod-phase, .rcod-phase div {
+    height: 15px
+}
+.rcod-seq, .rcod-seq div {
+    height: 13px
+}
+.rcod-seq {
+    display: inline-block;
+}
+.rcod-seq div, .rcod-phase div {
+    display: inline-block;
+    text-align: center;
+    font-size: 10px;
+}
+.rcod-phase > div {
+    cursor: pointer;
+    position: absolute;
+}
+.rcod-seq div {
+    overflow: hidden; 
+}
+.rcod-phase div[s1] {
+    background-color: #3C3;
+}
+.rcod-phase div[s2] {
+    background-color: #C33;
+}
+/* Start Stop */
+#rcod-cds-start div, #rcod-cds-stop div{
+    font-size: 13px;
+    width: 40px;
+    padding: 2px;
+    text-align: center;
+    left: -22px;
+    position: absolute;
+}
+#rcod-cds-start, #rcod-cds-stop {
+    height: 130px;
+    position: absolute;
+}
+.rcod-phase[phase^="h"] #rcod-cds-start {
+    left: 0px;
+    border-left: solid 1px #3C3;
+    color: #3C3;
+}
+.rcod-phase[phase^="b"] #rcod-cds-start {
+    right: 0px;
+    border-right: solid 1px #3C3;
+    color: #3C3;
+    width: initial;
+    display:table-cell;
+    vertical-align:bottom;
+}
+.rcod-phase[phase^="h"] #rcod-cds-stop {
+    right: 0px;
+    border-right: solid 1px #C33;
+    color: #C33;
+    width: initial;
+}
+.rcod-phase[phase^="b"] #rcod-cds-stop {
+    left: 0px;
+    border-left: solid 1px #C33;
+    color: #C33;
+}
+.rcod-phase[phase^="h"] > div > div > div{
+    top: -20px;
+}
+.rcod-phase[phase^="b"] > div > div > div{
+    bottom: -20px;
+}
+.rcod-phase[phase="h3"] > div > div {
+    top: -28px;
+}
+.rcod-phase[phase="h2"] > div > div {
+    top: -63px;
+}
+.rcod-phase[phase="h1"] > div > div {
+    top: -98px;
+}
+.rcod-phase[phase="b3"] > div > div {
+    bottom: -28px;
+}
+.rcod-phase[phase="b2"] > div > div {
+    bottom: -63px;
+}
+.rcod-phase[phase="b1"] > div > div {
+    bottom: -98px;
+}
+
+/*
+
+Traduction
+
+*/
+#rcod-label-2 div {
+    position: absolute;
+    border-right: solid 1px black;
+    width: 200px;
+    background-color: #CCC;
+    padding: 2px;
+}
+#rcod-label-2 div:nth-child(1) {
+
+    height: 160PX;
+    padding-top: 140px;
+    top: 44px;
+}
+#rcod-label-2 div:nth-child(2) {
+    bottom: 71px;
+
+}
+#rcod-label-2 div:nth-child(3) {
+    bottom: 37px;
+
+}
+
+#rcod-canvas {
+    position: absolute;
+    right: 100px;
+    top: 46px;
+}
+
+#rcod-trad {
+    position: absolute;
+    bottom: 5px;
+    left: 220px;
+    right: 5px;
+}
+#rcod-trad > div {
+    overflow: auto;
+    white-space: nowrap;
+}
+#rcod-trad table {
+    border-collapse: collapse;
+}
+#rcod-candidate {
+}
+#rcod-candidate td, #rcod-traduction td{
+    border: solid 1px black;
+    min-width: 16px;
+    height: 16px;
+    text-align: center;
+    padding: 0px;
+}
+#rcod-traduction td{
+    min-width: 50px;
+}
+
+/* Recherche */
+#rcod-label-3 div {
+    position: absolute;
+    border-right: solid 1px black;
+    width: 200px;
+    background-color: #CCC;
+    padding: 2px;
+}
+#rcod-label-3 div:nth-child(1) {
+
+    height: 120PX;
+    padding-top: 80px;
+    top: 44px;
+}
+#rcod-label-3 div:nth-child(2) {
+    top: 281px;
+
+}
+#rcod-label-3 div:nth-child(3) {
+    top: 352px;
+
+    padding: 10px 2px 10px 2px;
+}
+#rcod-tradfinale {
+    position: absolute;
+    left: 221px;
+    top: 42px;
+    right: 10px;
+    height: 199px;
+}
+#rcod-corps div[corps="3"] a {
+    position: absolute;
+    border: solid 1px black;
+    text-decoration: none;
+    font-weight: bold;
+}
+#rcod-swiss {
+    color: black;
+    top: 285px;
+    padding: 7px;
+    left: 422px;
+}
+#rcod-protNom {
+    position: absolute;
+    right: 129px;
+    top: 350px;
+    width: 270px;
+    padding: 5px;
+}
+#rcod-protOK {
+    right: 129px;
+    top: 396px;
+    color: green;
+    padding: 3px;
+}
+#rcod-protKO {
+    top: 396px;
+    right: 276px;
+    padding: 3px;
+    color: red;
+}
+
+div.rcod-prot {
+    background-color: rgba(0, 64, 208, 0.4);
+    color: white;
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    position: relative;
+    top: -6px;
+    height: 22px;
+    text-shadow: 0px 0px 3px black;
+    cursor: default;
+    overflow: hidden;
+}

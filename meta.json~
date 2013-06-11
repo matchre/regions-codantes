@@ -1,0 +1,47 @@
+{
+    "name": "Grain 3.0",
+    "width": "800px",
+    "height": "600px",
+    "link": "--lien vers la documentation principale qui permet de faire fonctionner le grain (ex: https://github.com/InriaMecsci/zero/wiki)--",
+    "comment": "---une ligne de description du grain--",
+    "links": [
+        {
+            "title": "Document qui document ce grain",
+            "uri": "http://interstices.info/***"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Patronyme, Prénom",
+            "role": "concepteur",
+            "mail": "*@*",
+            "comment": "auteur scientifique qui a proposé le grain"
+        },
+        {
+            "name": "Patronyme, Prénom",
+            "role": "auteur",
+            "comment": "version initiale en Java"
+        },
+        {
+            "name": "Patronyme, Prénom",
+            "role": "auteur",
+            "comment": "version HTLM5/JS"
+        },
+        {
+            "name": "---references de la JE qui a produit le grain---",
+            "role": "producteur"
+        }
+    ],
+    "licenses": [
+        {
+            "name": "CC BY-NC-SA",
+            "uri": "http://creativecommons.org/licenses/by-nc-sa/3.0/fr",
+            "comment": "s'applique aux documents"
+        },
+        {
+            "name": "CeCILL-C",
+            "uri": "http://www.cecill.info/licences/Licence_CeCILL-C_V1-fr.html",
+            "comment": "s'applique au code source"
+        }
+    ]
+}

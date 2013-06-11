@@ -1,0 +1,56 @@
+{
+    "name": "Recherche de régions codantes",
+    "width": "800px",
+    "height": "600px",
+      "link": "http://interstices.info/regions-codantes",
+      "comment": "Démonstration des mécanismes algorithmiques de recherche de régions codantes",
+    "links": [
+        {
+            "title": "Document qui document ce grain",
+            "uri": "http://interstices.info/regions-codantes"
+        }
+    ],
+    "authors": [
+ 	{
+	    "name" : "Monte, Régis",
+	    "role" : "auteur",
+	    "comment" : "version interstices en Java"
+	},
+	{
+	    "name" : "Surrel, Guillaume",
+	    "role" : "auteur",
+	    "comment" : "version interstices en Java"
+	},
+	{
+	    "name" : "Faroux, Gaël",
+	    "role" : "auteur",
+	    "comment" : "version originale de l'applet"
+	},
+	{
+	    "name" : "Baratin, Delphine ",
+	    "role" : "auteur",
+	    "comment" : "version originale de l'applet"
+	},
+        {
+            "name": "Lehmann Dussout, Hugo",
+            "role": "auteur",
+            "comment": "version HTLM5/JS"
+        },
+        {
+	  "name": "www.centralelilleprojets.fr",
+            "role": "producteur"
+        }
+    ],
+    "licenses": [
+        {
+            "name": "CC BY-NC-SA",
+            "uri": "http://creativecommons.org/licenses/by-nc-sa/3.0/fr",
+            "comment": "s'applique aux documents"
+        },
+        {
+            "name": "CeCILL-C",
+            "uri": "http://www.cecill.info/licences/Licence_CeCILL-C_V1-fr.html",
+            "comment": "s'applique au code source"
+        }
+    ]
+}
