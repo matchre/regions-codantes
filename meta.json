@@ -1,7 +1,7 @@
 {
     "name": "Recherche de régions codantes",
-    "width": "800px",
-    "height": "600px",
+    "width": "850px",
+    "height": "650px",
       "link": "http://interstices.info/regions-codantes",
       "comment": "Démonstration des mécanismes algorithmiques de recherche de régions codantes",
     "links": [
