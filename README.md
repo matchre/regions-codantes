@@ -1,8 +1,7 @@
-Zero (0)
-========
+Recherche de régions codantes
+=============================
 
-[![Build Status](https://travis-ci.org/InriaMecsci/zero.png?branch=master)](https://travis-ci.org/InriaMecsci/zero)
+[![Build Status](https://travis-ci.org/InriaMecsci/regions-codantes.png?branch=master)](https://travis-ci.org/InriaMecsci/regions-codantes)
 
-* [Le grain en action](http://inriamecsci.github.com/#!/grains/zero)
+* [Le grain en action](http://inriamecsci.github.com/#!/grains/regions-codantes)
 
-Grain 3.0 par défaut : squelette de départ
