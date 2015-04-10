@@ -15,7 +15,7 @@ Style des blocs principaux
     height: 600px;
     margin: auto;
     /* Contenu */
-    background-color: #CCC;
+    background-color: #FFF;
     position: relative;
     font-family: arial;
     font-size: 13px;
@@ -131,7 +131,7 @@ Corps 1
 
 */
 
-/*Options*/ 
+/*Options*/
 #rcod-options {
     width: 100px;
     float: left;
@@ -199,7 +199,7 @@ Corps 1
     position: absolute;
 }
 .rcod-seq div {
-    overflow: hidden; 
+    overflow: hidden;
 }
 .rcod-phase div[s1] {
     background-color: #3C3;
