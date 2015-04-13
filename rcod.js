@@ -540,8 +540,20 @@ rcod = {
 /*
      * Liste des instructions
      */
-rcod.instructions[1] = "Pour identifier une région codant, recherchez tout d'abord, sur l'une es six phases, une région située entre deux codons <strong>STOP</strong> et longue d'au moins 300 nucléotides. En faisant attention à l'orientation, sélectionnez alors le codon <strong>STOP</strong> à l'extrémité de cette région, puis le codon <strong>START</strong> qui maximise la taille de la CDS candidate.";
-rcod.instructions[2] = "Visualisez la traduction de la CDS candidate en une séquence d'acides aminés en sélectionnant les triplets de nucléotides sur la roue. Vous pouvez faire apparaître la structure d'un acide aminé en cliquant sur la lettre qui le désigne dans le disque le plus extérieur.    Lorsque vous aurez traduit <strong>5 triplets</strong>, vous pourrez continuer en utilisant les boutons du cadre <strong>Traduction</strong>.";
+rcod.instructions[1] = "Pour identifier une région codante :"
+    + "<ul>"
+    + "<li>rechercher tout d'abord, sur l'une des six phases, une région située entre deux codons <strong>STOP</strong> et longue d'au moins 300 nucléotides.</li>"
+    + "<li><strong>en faisant attention à l'orientation</strong>, sélectionner le codon <strong>STOP</strong> à l'extrémité de cette région, puis le codon <strong>START</strong> qui maximise la taille de la CDS candidate.</li>"
+    + "</ul>"
+    + "Vous pouvez utiliser le curseur situé à gauche pour zoomer sur la séquence.";
+rcod.instructions[2] = "Traduire <strong>la CDS candidate en une séquence d'acides aminés</strong> en sélectionnant, sur la roue, les acides aminés correspondant aux triplets de nucléotides :"
+    + "<ul>"
+    + "<li>les lettres au centre de la roue correspondent à la 1ère lettre des triplets,</li>"
+    + "<li>les lettres du disque suivant correspondent à la 2e lettre des triplets,</li>"
+    + "<li>les lettres du 3e disque correspondent à la dernière lettre des triplets,</li>"
+    + "<li>le disque le plus extérieur correspond aux lettres désignant les acides aminés.</li>"
+    + "</ul>"
+    + "Lorsque vous aurez traduit <strong>5 triplets</strong>, vous pourrez passer à l’étape suivante.";
 rcod.instructions[3] = "Recherchez dans la base de protéines <strong>Swiss-Prot</strong> des séquences similaires à la votre :<ol><li>Copiez la séquence polypeptidique issue de la traduction</li><li>Accédez au serveur Swiss-Prot et copiez la séquence dans la fenêtre <strong>Accession number or sequence</strong></li><li>Choisissez Niceblast dans la liste Output Format</li><li>Cliquez sur le bouton Run BLAST et attendez le retour de l'execution du programme</li><li>Copiez le nom de la protéine dont la séquence ressemble le plus à la votre, revenez dans cette fenêtre et collez ce nom dans le champ prévu à cet effet. Si la recherche a échoué, retournez à la première page et sélectionnez une autre cds candidate.</li><li>Cliquez sur Valider</li></ol>";
 rcod.instructions[4] = "Vous pouvez chercher d'autres CDS en recommençant les différentes étapes.";
 
