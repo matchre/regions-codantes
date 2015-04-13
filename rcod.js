@@ -1,7 +1,7 @@
 /*
- * 
+ *
  * Javascript pour le grain regions codantes
- * 
+ *
  */
 
 rcod = {
@@ -81,11 +81,11 @@ rcod = {
         }
     },
     start:{
-        pos:null, 
+        pos:null,
         phase:null
-    }, 
+    },
     stop:{
-        pos:null, 
+        pos:null,
         phase:null
     },
     start1: function(obj) {
@@ -139,9 +139,9 @@ rcod = {
         C:"G"
     },
     couleur: {
-        T:"#9F9", 
-        A:"#99F", 
-        G:"#FF9", 
+        T:"#9F9",
+        A:"#99F",
+        G:"#FF9",
         C:"#F99"
     },
     initSequence: function () {
@@ -222,7 +222,7 @@ rcod = {
         $(".rcod-phase div.rcod-prot").each(function() {
             $(this).css("width",($(this).attr("w")*p)+"px");
         })
-        
+
         if(this.start.pos && this.stop.pos)
             $("#rcod-cds").scrollLeft((this.start.pos + this.stop.pos)*p/2 - l/2)
         else if(this.start.pos || this.stop.pos)
@@ -250,7 +250,7 @@ rcod = {
             strokeStyle: "#000",
             strokeWidth: 1,
             layer:true,
-            x: l/2, 
+            x: l/2,
             y: l/2,
             width: l-2,
             height: l-2
@@ -261,7 +261,7 @@ rcod = {
                 this.canvas2(obj, l, 1, 4*i+j, this.lettres[j],[i,j])
                 for(k = 0; k < 4 ; k++) {
                     this.canvas2(obj, l, 2, 16*i+4*j+k, this.lettres[k],[i,j,k])
-                }   
+                }
             }
         }
         var etage = 3;
@@ -280,7 +280,7 @@ rcod = {
                             opts = {
                                 layer:layer,
                                 fillStyle: "#000",
-                                x: (0.5-(0.125*etage+0.07)*Math.cos((iii)/Math.pow(4, etage)*2*Math.PI))*l, 
+                                x: (0.5-(0.125*etage+0.07)*Math.cos((iii)/Math.pow(4, etage)*2*Math.PI))*l,
                                 y: (0.5-(0.125*etage+0.07)*Math.sin((iii)/Math.pow(4, etage)*2*Math.PI))*l,
                                 fontSize: (11)+"pt",
                                 fontFamily: "Verdana, sans-serif",
@@ -296,9 +296,9 @@ rcod = {
                             layer:true,
                             strokeStyle: "#000",
                             strokeWidth: 1,
-                            x1: (0.5-0.125*(etage)*Math.cos(ii/64*2*Math.PI))*l, 
+                            x1: (0.5-0.125*(etage)*Math.cos(ii/64*2*Math.PI))*l,
                             y1: (0.5-0.125*(etage)*Math.sin(ii/64*2*Math.PI))*l,
-                            x2: (0.5-0.125*(etage+1)*Math.cos(ii/64*2*Math.PI))*l, 
+                            x2: (0.5-0.125*(etage+1)*Math.cos(ii/64*2*Math.PI))*l,
                             y2: (0.5-0.125*(etage+1)*Math.sin(ii/64*2*Math.PI))*l,
                         })
                         n = 0;
@@ -307,19 +307,19 @@ rcod = {
                     n++;
                     var opts = {
                         layer:true,
-                        x1: (0.5-0.125*(etage)*Math.cos(ii/64*2*Math.PI))*l, 
+                        x1: (0.5-0.125*(etage)*Math.cos(ii/64*2*Math.PI))*l,
                         y1: (0.5-0.125*(etage)*Math.sin(ii/64*2*Math.PI))*l,
-                        x2: (0.5-0.125*(etage+1)*Math.cos(ii/64*2*Math.PI))*l, 
+                        x2: (0.5-0.125*(etage+1)*Math.cos(ii/64*2*Math.PI))*l,
                         y2: (0.5-0.125*(etage+1)*Math.sin(ii/64*2*Math.PI))*l,
-                        x3: (0.5-0.125*(etage+1)*Math.cos((ii+0.25)/64*2*Math.PI))*l, 
+                        x3: (0.5-0.125*(etage+1)*Math.cos((ii+0.25)/64*2*Math.PI))*l,
                         y3: (0.5-0.125*(etage+1)*Math.sin((ii+0.25)/64*2*Math.PI))*l,
-                        x4: (0.5-0.125*(etage+1)*Math.cos((ii+0.5)/64*2*Math.PI))*l, 
+                        x4: (0.5-0.125*(etage+1)*Math.cos((ii+0.5)/64*2*Math.PI))*l,
                         y4: (0.5-0.125*(etage+1)*Math.sin((ii+0.5)/64*2*Math.PI))*l,
-                        x5: (0.5-0.125*(etage+1)*Math.cos((ii+0.75)/64*2*Math.PI))*l, 
+                        x5: (0.5-0.125*(etage+1)*Math.cos((ii+0.75)/64*2*Math.PI))*l,
                         y5: (0.5-0.125*(etage+1)*Math.sin((ii+0.75)/64*2*Math.PI))*l,
-                        x6: (0.5-0.125*(etage+1)*Math.cos((ii+1)/64*2*Math.PI))*l, 
+                        x6: (0.5-0.125*(etage+1)*Math.cos((ii+1)/64*2*Math.PI))*l,
                         y6: (0.5-0.125*(etage+1)*Math.sin((ii+1)/64*2*Math.PI))*l,
-                        x7: (0.5-0.125*(etage)*Math.cos((ii+1)/64*2*Math.PI))*l, 
+                        x7: (0.5-0.125*(etage)*Math.cos((ii+1)/64*2*Math.PI))*l,
                         y7: (0.5-0.125*(etage)*Math.sin((ii+1)/64*2*Math.PI))*l,
                         data: [i,j,k],
                         click: function(layer) {
@@ -334,7 +334,7 @@ rcod = {
         opts = {
             layer:layer,
             fillStyle: "#000",
-            x: (0.5-(0.125*etage+0.07)*Math.cos((iii)/Math.pow(4, etage)*2*Math.PI))*l, 
+            x: (0.5-(0.125*etage+0.07)*Math.cos((iii)/Math.pow(4, etage)*2*Math.PI))*l,
             y: (0.5-(0.125*etage+0.07)*Math.sin((iii)/Math.pow(4, etage)*2*Math.PI))*l,
             fontSize: (11)+"pt",
             fontFamily: "Verdana, sans-serif",
@@ -356,19 +356,19 @@ rcod = {
             fillStyle:couleur,
             strokeStyle: "#000",
             strokeWidth: 1,
-            x1: (0.5-0.125*(etage)*Math.cos(i/Math.pow(4, etage+1)*2*Math.PI))*l, 
+            x1: (0.5-0.125*(etage)*Math.cos(i/Math.pow(4, etage+1)*2*Math.PI))*l,
             y1: (0.5-0.125*(etage)*Math.sin(i/Math.pow(4, etage+1)*2*Math.PI))*l,
-            x2: (0.5-0.125*(etage+1)*Math.cos(i/Math.pow(4, etage+1)*2*Math.PI))*l, 
+            x2: (0.5-0.125*(etage+1)*Math.cos(i/Math.pow(4, etage+1)*2*Math.PI))*l,
             y2: (0.5-0.125*(etage+1)*Math.sin(i/Math.pow(4, etage+1)*2*Math.PI))*l,
-            x3: (0.5-0.125*(etage+1)*Math.cos((i+0.25)/Math.pow(4, etage+1)*2*Math.PI))*l, 
+            x3: (0.5-0.125*(etage+1)*Math.cos((i+0.25)/Math.pow(4, etage+1)*2*Math.PI))*l,
             y3: (0.5-0.125*(etage+1)*Math.sin((i+0.25)/Math.pow(4, etage+1)*2*Math.PI))*l,
-            x4: (0.5-0.125*(etage+1)*Math.cos((i+0.5)/Math.pow(4, etage+1)*2*Math.PI))*l, 
+            x4: (0.5-0.125*(etage+1)*Math.cos((i+0.5)/Math.pow(4, etage+1)*2*Math.PI))*l,
             y4: (0.5-0.125*(etage+1)*Math.sin((i+0.5)/Math.pow(4, etage+1)*2*Math.PI))*l,
-            x5: (0.5-0.125*(etage+1)*Math.cos((i+0.75)/Math.pow(4, etage+1)*2*Math.PI))*l, 
+            x5: (0.5-0.125*(etage+1)*Math.cos((i+0.75)/Math.pow(4, etage+1)*2*Math.PI))*l,
             y5: (0.5-0.125*(etage+1)*Math.sin((i+0.75)/Math.pow(4, etage+1)*2*Math.PI))*l,
-            x6: (0.5-0.125*(etage+1)*Math.cos((i+1)/Math.pow(4, etage+1)*2*Math.PI))*l, 
+            x6: (0.5-0.125*(etage+1)*Math.cos((i+1)/Math.pow(4, etage+1)*2*Math.PI))*l,
             y6: (0.5-0.125*(etage+1)*Math.sin((i+1)/Math.pow(4, etage+1)*2*Math.PI))*l,
-            x7: (0.5-0.125*(etage)*Math.cos((i+1)/Math.pow(4, etage+1)*2*Math.PI))*l, 
+            x7: (0.5-0.125*(etage)*Math.cos((i+1)/Math.pow(4, etage+1)*2*Math.PI))*l,
             y7: (0.5-0.125*(etage)*Math.sin((i+1)/Math.pow(4, etage+1)*2*Math.PI))*l,
             closed: true,
             data: data,
@@ -380,7 +380,7 @@ rcod = {
         opts = {
             layer:layer,
             fillStyle: "#000",
-            x: (0.5-(0.125*etage+0.07)*Math.cos((i+0.5)/Math.pow(4, etage+1)*2*Math.PI))*l, 
+            x: (0.5-(0.125*etage+0.07)*Math.cos((i+0.5)/Math.pow(4, etage+1)*2*Math.PI))*l,
             y: (0.5-(0.125*etage+0.07)*Math.sin((i+0.5)/Math.pow(4, etage+1)*2*Math.PI))*l,
             fontSize: (11 - 3*etage)+"pt",
             fontFamily: "Verdana, sans-serif",
@@ -614,5 +614,5 @@ rcod.molecules = {
     TTG: "L",
     TTA: "L",
     TTC: "F",
-    TTT: "F" 
+    TTT: "F"
 }
