@@ -12,7 +12,7 @@ Style des blocs principaux
 #rcod {
     /* boite */
     width: 780px;
-    height: 600px;
+    height: 650px;
     margin: auto;
     /* Contenu */
     background-color: #FFF;
@@ -35,7 +35,7 @@ Style des blocs principaux
     width: 245px;
 }
 #rcod-etapes .rcod-contenu {
-    height: 88px;
+    height: 138px;
 }
 
 /* div des messages */
@@ -46,7 +46,7 @@ Style des blocs principaux
     width: 520px;
 }
 #rcod-messages .rcod-contenu {
-    height: 88px;
+    height: 138px;
 }
 
 /* div des messages */
