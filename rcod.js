@@ -554,7 +554,13 @@ rcod.instructions[2] = "Traduire <strong>la CDS candidate en une séquence d'aci
     + "<li>le disque le plus extérieur correspond aux lettres désignant les acides aminés.</li>"
     + "</ul>"
     + "Lorsque vous aurez traduit <strong>5 triplets</strong>, vous pourrez passer à l’étape suivante.";
-rcod.instructions[3] = "Recherchez dans la base de protéines <strong>Swiss-Prot</strong> des séquences similaires à la votre :<ol><li>Copiez la séquence polypeptidique issue de la traduction</li><li>Accédez au serveur Swiss-Prot et copiez la séquence dans la fenêtre <strong>Accession number or sequence</strong></li><li>Choisissez Niceblast dans la liste Output Format</li><li>Cliquez sur le bouton Run BLAST et attendez le retour de l'execution du programme</li><li>Copiez le nom de la protéine dont la séquence ressemble le plus à la votre, revenez dans cette fenêtre et collez ce nom dans le champ prévu à cet effet. Si la recherche a échoué, retournez à la première page et sélectionnez une autre cds candidate.</li><li>Cliquez sur Valider</li></ol>";
+rcod.instructions[3] = "<ol>"
+    + "<li>Coller la séquence protéique dans le fenêtre « STEP 1 - Enter a sequence »</li>"
+    + "<li>Dans le « STEP 2 Choose a database », préciser Bacteria de la base UniProt Knowledgebase</li>"
+    + "<li>Puis Run blast</li>"
+    + "<li>Copier le nom de la protéine de la première colonne de la première ligne des résultats (en dessous de « Submission »), si la ligne « Matches on query sequence » est verte (ce qui signifie une bonne similarité des séquences) ; si ce n'est pas le cas, revenir à l'étape 1 et chercher une autre région codante candidate.</li>"
+    + "<li>Coller ce nom dans la fenêtre puis « Valider l'annotation »</li>"
+    + "</ol>";
 rcod.instructions[4] = "Vous pouvez chercher d'autres CDS en recommençant les différentes étapes.";
 
 /*
